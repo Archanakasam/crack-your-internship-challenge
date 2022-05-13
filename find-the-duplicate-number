@@ -1,0 +1,8 @@
+class Solution(object):
+    def findDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        p = set(nums)
+        return (sum(nums) - sum(p)) // (len(nums) - len(p))
